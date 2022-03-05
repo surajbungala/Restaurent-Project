@@ -3,184 +3,41 @@ export const DISHES =
         {
         id: 0,
         name:'Uthappizza',
-        image: 'assets/images/uthappizza.png',
+        image: '/assets/images/uthappizza.png',
         category: 'mains',
         label:'Hot',
-        price:'490',
-        description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2020-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2020-06-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2019-12-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2019-02-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "250 Rupees",
-            date: "2020-12-02T17:57:28.556094Z"
-            }
-        ]                        },
+        price:'499',
+        featured: true,
+        description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                    
+        },
         {
         id: 1,
         name:'Zucchipakoda',
-        image: 'assets/images/zucchipakoda.png',
+        image: '/assets/images/zucchipakoda.png',
         category: 'appetizer',
         label:'',
-        price:'290',
-        description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2018-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2018-09-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2019-02-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2019-12-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "250 Rupees",
-            date: "2020-12-02T17:57:28.556094Z"
-            }
-        ]
+        price:'199',
+        featured: false,
+        description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce'
         },
         {
         id: 2,
         name:'Vadonut',
-        image: 'assets/images/vadonut.png',
+        image: '/assets/images/vadonut.png',
         category: 'appetizer',
         label:'New',
-        price:'190',
-        description:'A quintessential ConFusion experience, is it a vada or is it a donut?',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2018-04-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2018-09-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2019-02-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2019-12-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "250 Rupees",
-            date: "2020-01-02T17:57:28.556094Z"
-            }
-        ]
+        price:'199',
+        featured: false,
+        description:'A quintessential ConFusion experience, is it a vada or is it a donut?'
         },
         {
         id: 3,
         name:'ElaiCheese Cake',
-        image: 'assets/images/elaicheesecake.png',
+        image: '/assets/images/elaicheesecake.png',
         category: 'dessert',
         label:'',
-        price:'150',
-        description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Imagine all the eatables, living in conFusion!",
-            author: "John Lemon",
-            date: "2020-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-            author: "Paul McVites",
-            date: "2019-09-05T17:57:28.556094Z"
-            },
-            {
-            id: 2,
-            rating: 3,
-            comment: "Eat it, just eat it!",
-            author: "Michael Jaikishan",
-            date: "2020-02-13T17:57:28.556094Z"
-            },
-            {
-            id: 3,
-            rating: 4,
-            comment: "Ultimate, Reaching for the stars!",
-            author: "Ringo Starry",
-            date: "2020-12-02T17:57:28.556094Z"
-            },
-            {
-            id: 4,
-            rating: 2,
-            comment: "It's your birthday, we're gonna party!",
-            author: "250 Rupees",
-            date: "2019-12-02T17:57:28.556094Z"
-            }
-        ]
+        price:'299',
+        featured: false,
+        description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms'
         }
     ];
