@@ -70,6 +70,7 @@ import { Link } from 'react-router-dom';
             <div className='row'>
                 <Breadcrumb>
                     <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+                    <BreadcrumbItem><Link to='/aboutus'>About Us</Link></BreadcrumbItem>
                     <BreadcrumbItem><Link to = '/menu'>Menu</Link></BreadcrumbItem>
                     <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                 </Breadcrumb>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function RenderMenuItem({dish}){
   return(
           <Card>
-            <Link to={'/menu/${dish.id}'}>
+            <Link to={`/menu/${dish.id}`}>
               <CardImg width = "100%" src = {dish.image} alt = {dish.name}/>
               <CardImgOverlay>
                 <CardTitle>{dish.name}</CardTitle>
@@ -28,6 +28,7 @@ const Menu = (props) => {
               <div className='row'>
                 <Breadcrumb>
                     <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+                    <BreadcrumbItem><Link to='/aboutus'>About Us</Link></BreadcrumbItem>
                     <BreadcrumbItem><Link to='/contact'>Contact</Link></BreadcrumbItem>
                     <BreadcrumbItem active>Menu</BreadcrumbItem>
                 </Breadcrumb>
