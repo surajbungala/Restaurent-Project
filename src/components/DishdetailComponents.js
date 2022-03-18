@@ -66,7 +66,7 @@ class CommentForm extends Component {
                                         required
                                     }}
                                 >
-                                    <option>Please Select</option>
+                                    <option>Select</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -140,9 +140,7 @@ class CommentForm extends Component {
                                 </Button>
                             </Col>
                         </Row>
-
                     </LocalForm>
-
                 </ModalBody>
             </Modal>
         </React.Fragment>
@@ -151,7 +149,7 @@ class CommentForm extends Component {
 }
 
 
-/**........................ comment component ends ................................................. */
+/**........................ comment component ends ................................. */
 
     
     function RenderDish({dish}) {
