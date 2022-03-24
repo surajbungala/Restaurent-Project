@@ -1,32 +1,106 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
+import { Loading } from "./LoadingComponents";
+import { Fade, Stagger } from 'react-animation-components';
 
 
-function RenderLeader({ leader }) {
-    return(
-        <div key={leader.id} className="col-12 mt-5">
-            <Media tag="li">
-                <Media left middle>
-                    <Media object src={leader.image} alt={leader.name} />
+function RenderLeader({ leader}) {
+
+        return(
+            <div key={leader.id} className="col-12 mt-5">
+                <Media tag="li">
+                    <Media left middle>
+                        <Media object src={baseUrl + leader.image} alt={leader.name} />
+                    </Media>
+                    <Media body className="ml-5">
+                        <Media heading>{leader.name}</Media>
+                        <p>{leader.description}</p>
+                    </Media>
                 </Media>
-                <Media body className="ml-5">
-                    <Media heading>{leader.name}</Media>
-                    <p>{leader.description}</p>
-                </Media>
-            </Media>
-        </div>
-    );
+            </div>
+        );
 }
 
-function About(props) {
 
-    const leaders = props.leaders.map((leader) => {
+function LeaderList(props) {
+
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
-            <RenderLeader leader =  {leader}/>
+            <Fade in key={leader._id}>
+                <div className="col-12 mt-2">
+                        <RenderLeader leader={leader} />
+                </div>
+            </Fade>
         );
     });
 
+    if (props.leaders.isLoading) {
+        return(
+                <Loading />
+        );
+    }
+    else if (props.leaders.errMess) {
+        return(
+            <div className="col-12"> 
+                <h4>{props.leaders.errMess}</h4>
+            </div>
+        );
+    }
+    else {
+        return (
+            <Media list>
+                <Stagger in>
+                    {leaders}
+                </Stagger>
+            </Media>
+        );
+    }
+}
+
+
+
+function About(props) {
+    /*
+    const leaders = (() => {
+        if (props.leaders.isLoading) {
+          return (
+            <div className="container">
+              <div className="row">
+                <Loading />
+              </div>
+            </div>
+          );
+        }
+        else if (props.leaders.errMess) {
+          return (
+            <div className="container">
+              <div className="row">
+                <h4>{props.leaders.errMess}</h4>
+              </div>
+            </div>
+          );
+        }
+        else {
+          return (
+            <ul className="list-unstyled">
+              <Stagger in>
+                {
+                  props.leaders.leaders.map((leader) => {
+                    return (
+                      <Fade in>
+                        <RenderLeader leader={leader} />
+                      </Fade>
+                    );
+                  })
+                }
+              </Stagger>
+            </ul>
+          );
+        }
+      })();
+    */
     return(
         <div className="container">
             <div className="row">
@@ -89,7 +163,15 @@ function About(props) {
                 </div>
                 <div className="col-12">
                     <Media list>
-                        {leaders}
+                        {/*{leaders}*/}
+                        <LeaderList leaders={props.leaders} />
+                      {/*
+                        <RenderContent
+                            leaders={props.leaders}
+                            isLoading={props.leaderLoading}
+                            errMess={props.leaderErrMess}/> 
+                      */}   
+                   
                     </Media>
                 </div>
             </div>
